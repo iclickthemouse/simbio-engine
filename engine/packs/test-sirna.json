@@ -1,0 +1,44 @@
+{
+  "pack": 1,
+  "demo": true,
+  "company": {"name": "Halcyon & Reed Bio", "mission": "Silence the genes behind rare liver-driven diseases.", "accent": "#7A3E00"},
+  "program": {
+    "code": "HRB-04", "drug": "testisiran", "nameText": "Small interfering RNA medicines end in -siran.",
+    "track": "rare", "targetShort": "the faulty protein made in the liver",
+    "target": "a protein made in the liver that misfolds and builds up in nerves and the heart",
+    "evidence": "people who carry gene variants that lower the protein are protected, and lowering it in models slows damage",
+    "bet": "silencing the gene in the liver could stop the protein from building up",
+    "biomarker": "Protein lowered in blood",
+    "p1Note": "One dose lowered the protein for months, which could allow dosing a few times a year."
+  },
+  "modality": {
+    "label": "siRNA", "plain": "an siRNA medicine", "app": "NDA",
+    "appWhy": "siRNA medicines are made by chemical synthesis, so they are approved through a New Drug Application (NDA). Biologics use a BLA.",
+    "line": "Oligonucleotide synthesis lines", "lineOne": "synthesis line",
+    "p1Doses": ["25 mg", "100 mg", "300 mg", "600 mg"], "doseNote": "single injection under the skin"
+  },
+  "disease": {
+    "label": "Rare amyloid disease", "dis": "a rare inherited amyloid disease",
+    "p2Text": "The main measure is how much the faulty protein drops in the blood.",
+    "p3Text": "One pivotal randomized trial measures nerve function over 18 months.",
+    "priceText": "several hundred thousand dollars a year before discounts", "orphan": true,
+    "trials": {"p1": {"label": "Phase 1 · healthy volunteers", "n": 40}},
+    "expansions": [{"id": "cardio", "name": "Heart form of the disease", "pop": 9000, "n": 600, "dur": 52, "illustrative": true,
+      "note": {"h": "The heart form", "b": ["The same protein can build up in the heart.", "Trials measure hospital visits and survival."], "m": "Same gene, different organ."}}]
+  },
+  "lessons": {
+    "screen": {"h": "Designing the silencer", "b": ["An siRNA is a short double strand of RNA. Inside a cell it guides an enzyme complex to destroy the matching messenger RNA, so less protein gets made.", "Scientists design hundreds of sequences that match {target} and test which ones silence it best."], "m": "Match the message, stop the protein."}
+  },
+  "titles": {"screen": {"t": "Design siRNA sequences", "d": "Write hundreds of candidate sequences that match the gene."}},
+  "gates": {
+    "cand": {"ev": {"cols": ["Test", "Lead A", "Lead B"], "rows": [["Protein lowered in liver cells", "95%", "90%"], ["Off-target genes silenced", "12", "1"], ["Stable in blood", "Yes", "Yes"]]},
+             "q": {"q": "Which lead should {co} take forward?", "a": ["Lead A, the strongest silencer", "Lead B, almost as strong and far cleaner"], "r": 1, "e": "Silencing other genes by accident can cause side effects. Lead B is nearly as strong and much more specific."}},
+    "file": {"ev": {"list": ["Pivotal trial met its main goal", "Manufacturing validated"]}}
+  },
+  "story": {"welcome": {"when": "2019", "text": "Halcyon & Reed spun out of a university lab with < 10 people."}, "dc": {"text": "We picked {code}."}},
+  "today": {"after": "dc", "text": "We just picked our candidate."},
+  "values": [{"name": "Rigor", "means": "Check twice.", "at": "hits", "example": "We repeat key experiments."}],
+  "quiz": [{"q": "What does {code} do?", "a": ["Silences a gene", "Edits DNA"], "r": 0, "e": "It silences the gene's message."}],
+  "glossary": [{"term": "siRNA", "def": "Small interfering RNA."}],
+  "sources": [{"title": "Test pack", "url": "https://example.com/?a=1&b=2"}]
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create SimBio for your company</title>
+<meta name="description" content="Turn your biotech's real story into a SimBio onboarding game with Claude. Free through 2026.">
+<meta name="theme-color" content="#003FCC">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://simbio.mikeclark.design/create/">
+<meta property="og:title" content="Create SimBio for your company">
+<meta property="og:description" content="Turn your biotech's real story into an onboarding game with Claude. Free through 2026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23003FCC'/%3E%3Cpath d='M26 14h12M28 14v14L17 47a4 4 0 0 0 3.5 6h23a4 4 0 0 0 3.5-6L36 28V14' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M22 42h20' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* VOICE: plain, friendly, confident. IDEA: SimBio's own onboarding card. PICTURE: the download card. COLOUR and TYPE: SimBio blue on its mint paper, Bricolage + Atkinson. LAYOUT: pitch left, download right, then steps and questions. */
+:root{color-scheme:light dark;--paper:#ECF1EF;--card:#FAFCFB;--ink:#15211F;--muted:#56655F;--line:#C6D1CD;--accent:#003FCC;--accent-ink:#fff;--soft:#E2E9FA}
+@media(prefers-color-scheme:dark){:root{--paper:#0E1514;--card:#151E1D;--ink:#E3ECE9;--muted:#93A49F;--line:#2A3735;--accent:#6B94FF;--accent-ink:#081633;--soft:#16233F}}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Atkinson Hyperlegible",system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:clamp(24px,5vw,64px) max(5vw,18px)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:clamp(28px,5vw,56px)}
+.brand{font:800 22px/1 "Bricolage Grotesque",system-ui;color:var(--ink);text-decoration:none}.brand span{color:var(--accent)}
+nav a{color:var(--muted);margin-left:18px;font-size:15px}
+h1{font:800 clamp(34px,6vw,58px)/1.04 "Bricolage Grotesque",system-ui;margin:0 0 18px;text-wrap:balance;max-width:16ch}
+h2{font:800 clamp(24px,3.4vw,32px)/1.1 "Bricolage Grotesque",system-ui;margin:0 0 14px}
+h3{font:700 18px/1.3 "Atkinson Hyperlegible",system-ui;margin:0 0 6px}
+p{margin:0 0 14px;max-width:62ch}.lede{font-size:clamp(18px,2.2vw,21px);color:var(--muted)}
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:center}
+.get{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.price{font:800 54px/1 "Bricolage Grotesque",system-ui}.price small{display:block;font:500 15px "IBM Plex Mono",monospace;color:var(--muted);margin-top:8px}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;font-size:18px;padding:15px 18px;border-radius:12px;margin:18px 0 12px;min-height:48px}
+.btn2{display:block;text-align:center;color:var(--accent);font-weight:700;text-decoration:none;padding:10px;border:1px solid var(--line);border-radius:12px;min-height:44px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.note{font-size:15px;color:var(--muted);margin:0}
+ul.ticks{list-style:none;padding:0;margin:16px 0 0}ul.ticks li{padding-left:26px;position:relative;margin:6px 0;font-size:16px}
+ul.ticks li::before{content:"";position:absolute;left:2px;top:.55em;width:12px;height:7px;border-left:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(-45deg)}
+.band{margin-top:clamp(44px,7vw,80px)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;margin-bottom:12px}
+.step p{font-size:16px;margin:0}
+.ask{background:var(--soft);border-radius:12px;padding:14px 16px;font-size:16px;margin-top:18px}
+details{border-top:1px solid var(--line);padding:14px 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{font-weight:700;cursor:pointer;min-height:32px}details p{margin:10px 0 0;font-size:16px}
+footer{margin-top:56px;font-size:14px;color:var(--muted)}footer a{color:inherit}
+a{color:var(--accent)}
+@media(max-width:760px){.hero,.steps{grid-template-columns:minmax(0,1fr)}nav a{margin:0 14px 0 0}}
+</style>
+</head>
+<body><div class="wrap">
+<div class="top"><a class="brand" href="/">Sim<span>Bio</span></a><nav><a href="/">Play SimBio</a><a href="https://github.com/iclickthemouse/simbio-engine">Source on GitHub</a></nav></div>
+
+<section class="hero">
+ <div>
+  <h1>Create SimBio for your company.</h1>
+  <p class="lede">New hires run your biotech from day one and retrace what your company actually did, from the founding science to today's trials. Every step teaches the science and the process in plain English.</p>
+  <p>Claude builds it with you from your website, documents or a 15-minute leader interview. You check one fact sheet and get back a link to share with your team.</p>
+ </div>
+ <aside class="get" aria-label="Download">
+  <div class="price">Free<small>through 2026 &middot; editions you start this year stay free</small></div>
+  <a class="btn" href="/create/simbio-onboarding.zip" download>Download the Claude skill</a>
+  <a class="btn2" href="https://github.com/iclickthemouse/simbio-engine">See how it's built on GitHub</a>
+  <ul class="ticks">
+   <li>Your colors and logo</li><li>Sourced facts only, nothing invented</li><li>SCORM and xAPI packages for your LMS</li><li>Update it as your company grows</li>
+  </ul>
+ </aside>
+</section>
+
+<section class="band">
+ <h2>How it works</h2>
+ <div class="steps">
+  <div class="step"><h3>Add the skill to Claude</h3><p>Turn on code execution in Claude's settings, then go to Customize, Skills and upload <b>simbio-onboarding.zip</b> (leave it zipped).</p></div>
+  <div class="step"><h3>Tell Claude about your company</h3><p>Share your website, a few documents or a leader interview. Claude drafts a one-page fact sheet for you to check.</p></div>
+  <div class="step"><h3>Share the link</h3><p>Claude builds the game, plays it end to end to check it, and hands you a private link or an LMS package.</p></div>
+ </div>
+ <div class="ask">Start a new chat and say: <b>"Make a SimBio onboarding for our company. Here's our website: …"</b></div>
+</section>
+
+<section class="band">
+ <h2>Questions</h2>
+ <details><summary>What do I need?</summary><p>A Claude plan with code execution turned on. Nothing to install on your computer, and no coding. If the menus look different from the steps above, search Anthropic's help center for "Use skills in Claude".</p></details>
+ <details><summary>Is it really free?</summary><p>Yes. SimBio and the Claude skill are free to use through the end of 2026, and any edition you start before 2027 stays free for good, updates included. From 2027, building new editions may be paid. The source is on GitHub so you can see exactly how it works. Details are in the <a href="https://github.com/iclickthemouse/simbio-engine/blob/main/LICENSE.md">SimBio Free License</a>.</p></details>
+ <details><summary>What about the illustrations?</summary><p>SimBio uses 20 free illustrations from Storyset. Their license doesn't allow bundling them, so the first time you build, Claude gives you the 20 links. Download them once (about 10 minutes) and Claude prepares them for you. You can also skip them.</p></details>
+ <details><summary>Is it accurate?</summary><p>Every company fact needs a source, nothing is invented, and investigational medicines are described the way your company describes them publicly. Still, have communications, legal or compliance read the fact sheet before it goes to every employee.</p></details>
+ <details><summary>Can you build it for us?</summary><p>Yes. A done-for-you edition, including the leader interview and LMS package, is available. Email hi@mikeclark.design.</p></details>
+</section>
+
+<footer>SimBio by <a href="https://mikeclark.design">Mike Clark</a> · Illustrations by <a href="https://storyset.com">Storyset</a> · Questions: hi@mikeclark.design</footer>
+</div></body>
+</html>

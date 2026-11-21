@@ -1,0 +1,301 @@
+<meta charset="utf-8">
+<title>SimBio Engine</title>
+<meta name="description" content="The engine behind SimBio company editions, shown with a fictional demo company.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&text=COKEDBYMIKLAR.SGN&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="engine.css">
+<script id="simbio-pack" type="application/json">
+{
+ "pack": 1,
+ "demo": true,
+ "asOf": "November 2026",
+ "company": {
+  "name": "Northbeam Therapeutics",
+  "shortName": "Northbeam",
+  "mission": "Make long-lasting medicines that let people with chronic inflammatory disease forget about it between doses.",
+  "what": "Northbeam is a clinical-stage biotech developing antibody medicines for immune diseases of the skin and joints.",
+  "facts": [
+   {
+    "label": "Founded",
+    "value": "2016"
+   },
+   {
+    "label": "Team",
+    "value": "About 120 people"
+   },
+   {
+    "label": "Lead program",
+    "value": "NBT-317 \u00b7 Phase 3"
+   },
+   {
+    "label": "Status",
+    "value": "Fictional demo company"
+   }
+  ],
+  "accent": "#0B6E63"
+ },
+ "welcome": {
+  "title": "Welcome to Northbeam.",
+  "text": "You are joining a team that wants people with psoriasis to go months between doses, not weeks. This game walks you through how we got here, one step at a time.",
+  "quote": {
+   "text": "Nobody here needs to be a scientist to follow what we do. Play this once and every all-hands will make more sense.",
+   "who": "Dana Whitlock, co-founder and CEO"
+  }
+ },
+ "people": [
+  {
+   "name": "Dana Whitlock",
+   "role": "Co-founder and CEO"
+  },
+  {
+   "name": "Ravi Menon",
+   "role": "Chief Scientific Officer"
+  },
+  {
+   "name": "Lena Ortiz",
+   "role": "Head of Clinical Development"
+  }
+ ],
+ "values": [
+  {
+   "name": "Patients set the bar",
+   "means": "We measure success by what changes for people living with the disease.",
+   "at": "p2",
+   "example": "Before designing Phase 2, the clinical team held listening sessions with people who have psoriasis. They said fewer injections mattered almost as much as clear skin, so the dosing interval became a main goal."
+  },
+  {
+   "name": "Say what the data says",
+   "means": "Good news and bad news travel at the same speed here.",
+   "at": "g_p1",
+   "example": "When one Phase 1 group showed a lab result nobody expected, the team shared it company-wide that week, before anyone knew it was harmless."
+  },
+  {
+   "name": "Build it to last",
+   "means": "We make choices that hold up for years, in the lab and in how we treat each other.",
+   "at": "cmc",
+   "example": "We chose a cell line and manufacturing partner that could scale all the way to launch, even though a cheaper option existed for early trials."
+  }
+ ],
+ "program": {
+  "code": "NBT-317",
+  "drug": null,
+  "track": "immunology",
+  "modality": "antibody",
+  "targetShort": "IL-23",
+  "target": "IL-23, a signaling protein (a cytokine) that keeps a type of inflammatory T cell, called Th17, active in the skin. Our antibody grabs the p19 piece that only IL-23 has",
+  "evidence": "variants in the IL-23 receptor gene change a person's risk of psoriasis, IL-23 levels are high in psoriatic skin, and blocking IL-23 calms inflammation in lab models",
+  "bet": "a longer-lasting antibody against IL-23 could keep psoriasis clear with fewer injections",
+  "selectivity": "IL-12, a related cytokine",
+  "biomarker": "Target engagement in blood",
+  "p1Note": "Half-life is about four weeks, long enough to consider dosing every few months.",
+  "labelRisk": "IL-23 blockers can raise the risk of infections, so patients are checked for tuberculosis before they start."
+ },
+ "disease": {
+  "label": "Psoriasis",
+  "dis": "moderate-to-severe plaque psoriasis",
+  "p2Text": "The main measure is PASI 75: the share of patients whose Psoriasis Area and Severity Index score improves by at least 75%. Many trials also report PASI 90.",
+  "p3Text": "Two pivotal trials of several hundred patients each, against placebo and often against an approved medicine. Both measure PASI 90 and a doctor's rating of clear or almost clear skin (sPGA 0/1) at week 16.",
+  "pop": 700000,
+  "price": 1500,
+  "priceText": "tens of thousands of dollars a year before discounts",
+  "p2Result": {
+   "measure": "Reached PASI 75 at week 16",
+   "arms": [
+    [
+     "Placebo",
+     "6%"
+    ],
+    [
+     "Low dose",
+     "52%"
+    ],
+    [
+     "Middle dose",
+     "81%"
+    ],
+    [
+     "Top dose",
+     "86%"
+    ]
+   ]
+  },
+  "p2Safety": "Most common side effects: colds and other upper respiratory infections, and headache. Serious infections were rare.",
+  "p3Result": "Both Phase 3 trials met their main goals for PASI 90 and clear or almost clear skin at week 16",
+  "expansions": [
+   {
+    "id": "psa",
+    "name": "Psoriatic arthritis",
+    "pop": 300000,
+    "n": 900,
+    "dur": 52,
+    "illustrative": true,
+    "note": {
+     "h": "Psoriatic arthritis: same signal, the joints",
+     "b": [
+      "Up to about 3 in 10 people with psoriasis develop psoriatic arthritis, with painful, swollen joints. The same IL-23 signal is involved.",
+      "Trials measure ACR20: the share of patients whose joint symptoms improve by at least 20% on a standard checklist, usually at week 24."
+     ],
+     "m": "One pathway can touch several organs."
+    }
+   },
+   {
+    "id": "crohns",
+    "name": "Crohn's disease",
+    "pop": 250000,
+    "n": 900,
+    "dur": 52,
+    "illustrative": true,
+    "note": {
+     "h": "Crohn's disease",
+     "b": [
+      "Crohn's disease is inflammation that can strike anywhere along the gut. IL-23 helps drive it, and IL-23 blockers are already used to treat it.",
+      "Trials usually start with doses into a vein to bring inflammation down, then switch to injections under the skin. They measure symptom remission and healing seen on a scope."
+     ],
+     "m": "Same target, new organ, new dosing plan."
+    }
+   },
+   {
+    "id": "peds",
+    "name": "Psoriasis in children (6 to 17)",
+    "pop": 60000,
+    "n": 200,
+    "dur": 40,
+    "illustrative": true,
+    "note": {
+     "h": "Studying children",
+     "b": [
+      "Psoriasis often starts in childhood or the teen years. US law (the Pediatric Research Equity Act) generally requires companies to study new drugs in children with the same disease.",
+      "Doses are based on body weight and checked with blood samples."
+     ],
+     "m": "Children are not small adults."
+    }
+   }
+  ]
+ },
+ "story": {
+  "welcome": {
+   "when": "2016",
+   "text": "Northbeam started with three people in a borrowed lab, licensing an early antibody design from a university group that studied skin inflammation.",
+   "quote": {
+    "text": "We had one idea and a whiteboard. The idea was good enough to bet on.",
+    "who": "Dana Whitlock, co-founder and CEO"
+   }
+  },
+  "validate": {
+   "when": "2016",
+   "text": "Our founding scientists had already shown that skin from people with psoriasis carries high levels of IL-23, and that blocking it calmed inflammation in lab models."
+  },
+  "seriesA": {
+   "when": "2017",
+   "text": "Northbeam raised its Series A from a group of life-science investors, enough to reach a development candidate."
+  },
+  "dc": {
+   "when": "2018",
+   "text": "NBT-317 became our development candidate. Its engineered tail is designed to keep it in the body longer than earlier IL-23 antibodies."
+  },
+  "ind": {
+   "when": "2019",
+   "text": "FDA allowed our first trial to go ahead after its 30-day review."
+  },
+  "p1": {
+   "when": "2019",
+   "text": "Our first-in-human study dosed healthy volunteers at a single clinic."
+  },
+  "p2": {
+   "when": "2021",
+   "text": "Phase 2 enrolled people with moderate-to-severe psoriasis across North America and Europe."
+  },
+  "p3": {
+   "when": "2024",
+   "text": "Phase 3 began with two pivotal trials. This is where Northbeam is now."
+  }
+ },
+ "gates": {
+  "cand": {
+   "story": {
+    "when": "2018",
+    "text": "Our team picked the antibody that was easier to manufacture, even though another one gripped the target slightly tighter."
+   }
+  },
+  "p2": {
+   "story": {
+    "when": "2023",
+    "text": "Northbeam kept full rights and raised money from public investors to fund Phase 3 on its own."
+   }
+  }
+ },
+ "today": {
+  "after": "p3",
+  "title": "You have caught up to Northbeam today",
+  "text": "Northbeam is running its Phase 3 trials now. Everything you have played so far mirrors steps the company has already taken.",
+  "next": "Phase 3 results are the next big milestone for NBT-317."
+ },
+ "quiz": [
+  {
+   "q": "What does NBT-317 block?",
+   "a": [
+    "IL-23, a signal that keeps inflammatory T cells active in the skin",
+    "A protein that makes skin cells grow faster",
+    "The receptor for histamine"
+   ],
+   "r": 0,
+   "e": "NBT-317 grabs IL-23, a signaling protein that keeps a type of inflammatory T cell active in psoriatic skin."
+  },
+  {
+   "q": "Why did Northbeam focus on a longer-lasting antibody?",
+   "a": [
+    "It is cheaper to make",
+    "Patients said fewer injections matter to them",
+    "FDA requires it"
+   ],
+   "r": 1,
+   "e": "Listening sessions showed that the dosing interval matters to patients almost as much as clear skin."
+  },
+  {
+   "q": "Which value is about sharing bad news quickly?",
+   "a": [
+    "Build it to last",
+    "Say what the data says",
+    "Patients set the bar"
+   ],
+   "r": 1,
+   "e": "Say what the data says: good news and bad news travel at the same speed."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "IL-23",
+   "def": "Interleukin-23, a signaling protein (cytokine) that keeps inflammatory Th17 cells active."
+  },
+  {
+   "term": "PASI",
+   "def": "Psoriasis Area and Severity Index: a 0 to 72 score that combines how much skin is affected with how red, thick and scaly it is."
+  },
+  {
+   "term": "sPGA",
+   "def": "Static Physician's Global Assessment: a doctor's overall rating of the skin, from clear to severe."
+  },
+  {
+   "term": "Half-life",
+   "def": "The time it takes for half of a dose to leave the body."
+  },
+  {
+   "term": "NBT-317",
+   "def": "Our lead antibody program."
+  }
+ ],
+ "ending": {
+  "title": "Welcome to Northbeam.",
+  "text": "Next, your manager will walk you through how your team fits into the Phase 3 program. Bring one question from this game to that conversation."
+ },
+ "sources": [
+  {
+   "title": "Demo content written for this example",
+   "note": "fictional company"
+  }
+ ]
+}
+</script>
+<script src="engine.js"></script>

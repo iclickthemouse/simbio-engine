@@ -1,0 +1,16 @@
+# Storyset illustrations are not redistributed (see README > Illustrations)
+art/*.svg
+# build output
+site/
+site.zip
+editions/
+engine/test/engine-inline.html
+engine/test/_run.html
+engine/test/_cmp.html
+engine/test/lessons_*.txt
+**/_smoke/
+**/shots/
+**/transcript.txt
+__pycache__/
+*.pyc
+.DS_Store
